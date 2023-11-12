@@ -51,30 +51,35 @@
 
 /*********Hands on lab**** */
 
+function saludar() {
+  return  "hola";
+}
 
-// let alumnos = [
-//   'daniel', 'fran', 'agustin', 'tomas', 'santiago'
-// ]
-
-
-// function mostrarLista (estudiantes) {
-//   if (estudiantes.length === 0){
-//     console.log('lista vacia') ;
-//   } else {
-// for (let x=0; x>estudiantes.length; x++){
-//   let descripcion = `${saludar()} ${estudiantes[x]}, que bueno tenerte en clase`;
-//   console.log(descripcion);
-// }
-//   }
-// }
+let alumnos = [
+  'daniel', 'fran', 'agustin', 'tomas', 'santiago'
+]
 
 
+
+function mostrarLista (estudiantes) {
+  if (estudiantes.length === 0){
+    console.log('lista vacia') ;
+  } else {
+for (let x=0; x>estudiantes.length; x++){
+  let descripcion = `${saludar()} ${estudiantes[x]}, que bueno tenerte en clase`;
+  console.log(descripcion);
+}
+  }
+  console.log("la longitud es ", estudiantes.length);
+}
+
+mostrarLista(alumnos)
 
 /*********CLOSURE**** */
 
-console.log(saludo);
-var saludo = "Hola mundo";
-console.log(saludo);
+// console.log(saludo);
+// var saludo = "Hola mundo";
+// console.log(saludo);
 
 
 

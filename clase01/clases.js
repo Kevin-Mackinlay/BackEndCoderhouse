@@ -17,6 +17,7 @@ class nombreDeMiClase {
 
 
 let instancia = new nombreDeMiClase();
+console.log(instancia.variableInterna);
 instancia.metodo1();
 instancia.metodo2();
 
