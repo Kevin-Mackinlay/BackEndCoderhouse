@@ -8,26 +8,36 @@ const usuarios = [
         id:1,
         nombre:"pedro",
         apellido:"sanchez",
-        edad:30
+        edad:30,
+        genero:"M"
     },
     {
         id:2,
-        nombre:"octavio",
+        nombre:"octavia",
         apellido:"santos",
-        edad:35
+        edad:35,
+         genero:"F"
     },
     {
         id:3,
         nombre:"luis",
         apellido:"moron",
-        edad:20
+        edad:20,
+         genero:"M"
     },
 ]
 
 app.get("/",(req, res) => {
+    let temporalUsers = usuarios;
+
+    const {genero} = req.query;
+    if(genero){
+        temporalUsers = temporalUsers.filter( user => user.genero.toLowerCase() === genero.toLowerCase())
+    }
+    
     res.json({
         msg:"Bienvenidos a la api de usuarios",
-        data: usuarios,
+        data: temporalUsers,
     })
 })
 
